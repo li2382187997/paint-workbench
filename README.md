@@ -20,7 +20,7 @@ https://024bb0c4d8d64695b7f852cf63aec87b.app.workbuddy.host
 ## 功能
 
 - **计时打卡**：开始 / 暂停 / 结束一次练习，自动落库为一条会话记录（起止时间 + 时长 + 备注）
-- **近 7 天趋势图**：纯 SVG 绘制的时长柱状图，不需要任何图表库
+- **近 7 天趋势图**：用 div + CSS 高度自绘的时长柱状图，不需要任何图表库
 - **作品归档**：拖拽文件或 Ctrl+V 直接粘贴上传，按分组管理展示台
 - **练习笔记**：随手记录心得，与作品、会话分表存储
 - **IndexedDB 三存储持久化**：`images` / `sessions` / `notes` 三个对象仓库互不干扰
@@ -33,7 +33,7 @@ https://024bb0c4d8d64695b7f852cf63aec87b.app.workbuddy.host
 |---|---|
 | 框架 | 无。原生 HTML/CSS/JS 单文件，全部内联 |
 | 存储 | IndexedDB（三个 object store），可存图片 Blob，容量远大于 localStorage |
-| 图表 | 手写 SVG，避免引入 Chart.js 这类外部依赖 |
+| 图表 | 用 `div` + CSS 百分比高度手写柱状图，避免引入 Chart.js 这类外部依赖 |
 | 图标 | 内联 base64，**全文件 0 处外部网络请求**（可离线打开） |
 | 体积 | 约 72 KB，单文件 |
 
